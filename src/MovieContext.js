@@ -9,21 +9,21 @@ function MovieProvider(props) {
             price:"1000",
             id:10001,
             realiseDate:"1999",
-            country:"Turkis"
+            ctry:"Turkis"
         },
         {
             name:"Sultan Suleiman",
             price:"1050",
             id:10002,
             realiseDate:"1980",
-            country:"Turkis"
+            ctry:"Turkis"
         },
         {
             name:"I Have Power",
             price:"500",
             id:10003,
             realiseDate:"2005",
-            country:"Bangladesh"
+            ctry:"Bangladesh"
         }
     ])
     return (

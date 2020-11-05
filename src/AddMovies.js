@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
+import { MovieContext } from './MovieContext';
 
 function AddMovies() {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
-    // const [country, setCountry] = useState('');
-
+    const [ctry, setCtry] = useState('');
+    const [movies, setMovies] = useContext(MovieContext);
 
     const updateName = e =>{
         setName(e.target.value);
@@ -12,13 +13,18 @@ function AddMovies() {
     const updatePrice = e =>{
         setPrice(e.target.value);
     };
-    // const updateCountry = e =>{
-    //     setCountry(e.target.value);
-    // };
+    const addMovie = e=>{
+        e.preventDefault();
+        setMovies(prevMovies => [...prevMovies, {name:name, price:price}]);
+    };
+
+    const updateCtry = e =>{
+        setCtry(e.target.value);
+    };
 
     return (
         <div>
-            <form>
+            <form onSubmit={addMovie}>
                 <input 
                     type="text" 
                     name="name"
@@ -31,12 +37,12 @@ function AddMovies() {
                     value={price}
                     onChange={updatePrice}
                 />
-               {/* <input 
+               <input 
                     type="text" 
-                    name="country"
-                    value={country}
-                    onChange={updateCountry}
-                /> */}
+                    name="ctry"
+                    value={ctry}
+                    onChange={updateCtry}
+                />
                 <button>Submite</button>
             </form>
         </div>

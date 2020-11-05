@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Movie({name,price,country}) {
+function Movie({name,price,ctry}) {
     return (
         <div>
-            <h3>{name}(<span>{country}</span>)</h3>
+            <h3>{name}(<span>{ctry}</span>)</h3>
             <p>{price}</p>
         </div>
     )
