@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
 import MovieList from './MovieList';
+import Nav from './Nav';
+import MovieProvider, {MovieContext} from './MovieContext'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello context API</h1>
-      <MovieList />
-    </div>
+    <MovieProvider>
+      <div className="App">
+        <Nav />
+        <MovieList />
+      </div>
+    </MovieProvider>
+    
   );
 }
 

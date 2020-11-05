@@ -1,0 +1,21 @@
+.header{
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header__opton{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+
+}
